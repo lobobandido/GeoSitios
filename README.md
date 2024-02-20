@@ -1,15 +1,7 @@
 # GeoSitios
 proyecto de prueba para capturar geolocalización de Sitio(puntos de servicio)
 
-Proyecto de E-Commerce con Django
-
-primera etapa
-
-contenido del repositorio+++++
-
-configuración Proyecto base configuración de la base de datos configuración de tablas para categorías productos y creación del panel de control
-
-Este proyecto es un e-commerce con los siguientes avances: se creo un entorno virtual, se crean las dependencias, conectamos la base de datos, creamos una app web, dentro de esta app web configuramos 2 modelos (categoría y productos) y por último se creo el panel de administración.
+se creo el panel de administración.
 
 comandos : python -m venv venv-----creamos entorno virtual
 
