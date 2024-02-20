@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar por Orden de Servicio</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="numero_orden">Número de Orden de Servicio:</label>
+        <input type="text" name="numero_orden" id="numero_orden">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if sitios %}
+        <ul>
+        {% for sitio in sitios %}
+            <li>{{ sitio.nombre }} - {{ sitio.direccion }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

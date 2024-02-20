@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar por Sitio</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <label for="direccion">Dirección del Sitio:</label>
+        <input type="text" name="direccion" id="direccion">
+        <button type="submit">Buscar</button>
+    </form>
+
+    {% if sitios %}
+        <ul>
+        {% for sitio in sitios %}
+            <li>{{ sitio.nombre }} - {{ sitio.direccion }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

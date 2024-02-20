@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - webGeo</title>
+    <style>
+        /* Estilos para el menú */
+        #menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2942e2;
+        }
+
+        #menu li {
+            float: left;
+        }
+
+        #menu li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #menu li a:hover {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bienvenido a Nuestro Sitio ¡¡¡¡webGeo!!!</h1>
+    <p>¡Encuentra información sobre las órdenes de servicio y los sitios específicos!</p>
+
+    <!-- Menú de Navegación -->
+    <ul id="menu">
+        <!-- <li><a href="{% url 'buscar_orden_servicio' %}">Buscar por Orden de Servicio</a></li> -->
+        <!-- <li><a href="{% url 'buscar_por_sitio' %}">Buscar por Sitio</a></li> -->
+
+        <li><a href="buscar_orden_servicio.html">Buscar por Orden de Servicio</a></li>
+        <li><a href="busccar_por_sitio.html">Buscar por Sitio</a></li>
+        <!-- Agrega más enlaces según la estructura de tu sitio -->
+    </ul>
+
+    <!-- Contenido de la página -->
+    <div id="buscar_por_orden">
+        <h2>Buscar por Orden de Servicio</h2>
+        <!-- Agrega contenido relacionado con la búsqueda por orden de servicio aquí -->
+    </div>
+
+    <div id="buscar_por_sitio">
+        <h2>Buscar por Sitio</h2>
+        <!-- Agrega contenido relacionado con la búsqueda por sitio aquí -->
+    </div>
+
+    <!-- Agrega más secciones según la estructura de tu sitio -->
+
+    <!-- JavaScript para el menú -->
+    <script>
+        // Agrega funcionalidad para resaltar el enlace activo en el menú
+        var links = document.querySelectorAll('#menu a');
+
+        links.forEach(function(link) {
+            link.addEventListener('click', function() {
+                links.forEach(function(otherLink) {
+                    otherLink.classList.remove('active');
+                });
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
